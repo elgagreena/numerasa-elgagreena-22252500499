@@ -47,33 +47,34 @@ numerasa/
 │   ├── __init__.py
 │   ├── input_data.py
 │   ├── proses.py
-│   ├── output.py
-│   ├── main.py
-│   ├── data_io.py
-│   ├── analisis.py
-│   └── utilitas.py
+│   └── output.py
 ├── tests/
 │   └── test_case.md
 ├── docs/
 │   ├── bug_log.md
 │   └── screenshot/
+│       ├── uji-aritmetika.png
+│       ├── uji-belanja-dan-diskon.png
+│       ├── uji-perbandingan.png
+│       ├── uji-input-menu.png
+│       └── uji-input-jawaban.png
 └── output/
     └── .gitkeep
 ```
 
 ## Test Case
 
-| ID | Pengujian | Hasil | Status |
-|---|---|---|---|
-| TC01 | Memilih kategori Aritmetika Sehari-hari. | Soal sesuai kategori ditampilkan. | Berhasil |
-| TC02 | Memasukkan jawaban benar. | Pesan jawaban benar ditampilkan. | Berhasil |
-| TC03 | Memasukkan jawaban salah. | Pesan jawaban belum tepat ditampilkan. | Berhasil |
-| TC04 | Menjawab seluruh soal dengan benar. | Nilai akhir 100.00 ditampilkan. | Berhasil |
-| TC05 | Memilih kategori Perbandingan. | Dua soal berbeda ditampilkan. | Berhasil |
-| TC06 | Memasukkan pilihan menu 4. | Pesan pilihan tidak tersedia ditampilkan. | Berhasil |
-| TC07 | Memasukkan jawaban berupa huruf. | Pesan kesalahan dan permintaan input ulang ditampilkan. | Berhasil |
-| TC08 | Menampilkan dua soal dalam satu sesi. | Soal tidak ditampilkan berulang. | Berhasil |
-| TC09 | Memasukkan huruf pada pilihan menu. | Pesan pilihan tidak tersedia ditampilkan. | Berhasil |
+| ID | Input/Kondisi | Hasil yang Diharapkan | Hasil Aktual | Status |
+|---|---|---|---|---|
+| TC01 | Memilih kategori 1. | Soal aritmetika ditampilkan. | Soal kategori Aritmetika Sehari-hari ditampilkan. | Berhasil |
+| TC02 | Memasukkan jawaban benar. | Pesan jawaban benar ditampilkan. | Pesan "Jawaban kamu benar!" ditampilkan. | Berhasil |
+| TC03 | Memasukkan jawaban salah. | Pesan jawaban salah ditampilkan. | Pesan "Jawaban kamu belum tepat!" ditampilkan. | Berhasil |
+| TC04 | Menjawab seluruh soal dengan benar. | Nilai akhir dihitung. | Nilai akhir 100.00 ditampilkan. | Berhasil |
+| TC05 | Memilih kategori 3. | Kategori terakhir ditampilkan. | Dua soal Perbandingan yang berbeda ditampilkan. | Berhasil |
+| TC06 | Memasukkan pilihan menu 4. | Pesan kesalahan ditampilkan. | Pesan pilihan tidak tersedia ditampilkan. | Berhasil |
+| TC07 | Memasukkan jawaban `abc`. | Pesan kesalahan dan input ulang ditampilkan. | Pesan input harus berupa angka ditampilkan. | Berhasil |
+| TC08 | Menampilkan dua soal dalam satu sesi. | Soal tidak berulang. | Dua soal berbeda ditampilkan. | Berhasil |
+| TC09 | Memasukkan `abc` pada pilihan menu. | Pesan kesalahan ditampilkan. | Pesan pilihan tidak tersedia ditampilkan. | Berhasil |
 
 ## Known Issues
 - Setiap kategori saat ini memiliki dua soal.
