@@ -1,42 +1,28 @@
 # NUMERASA
 ### Eksplorasi Numerasi dalam Kehidupan Sehari-hari
 
-## 1. Deskripsi Proyek
+## Deskripsi
+Numerasa merupakan program latihan numerasi berbasis Python yang ditujukan untuk siswa SMP. Program ini menyediakan soal-soal kontekstual yang berkaitan dengan kehidupan sehari-hari agar pengguna dapat melatih kemampuan berhitung dan menerapkan konsep matematika dalam situasi nyata.
 
-Numerasa merupakan program pembelajaran numerasi berbasis Python yang dirancang untuk membantu siswa SMP melatih kemampuan berhitung melalui soal-soal yang berkaitan dengan kehidupan sehari-hari.
+## Fitur
+- Menampilkan menu tiga kategori latihan.
+- Menampilkan soal numerasi secara acak sesuai kategori.
+- Menerima dan memeriksa jawaban pengguna.
+- Menampilkan hasil jawaban benar atau salah.
+- Menghitung dan menampilkan nilai akhir latihan.
 
-Program ini dibuat untuk memberikan pengalaman belajar numerasi yang sederhana dan mudah digunakan melalui terminal.
+Kategori latihan:
+1. Aritmetika Sehari-hari
+2. Belanja dan Diskon
+3. Perbandingan
 
-## 2. Fitur Program
+## Persyaratan
+- Python 3.x
+- Program dijalankan melalui terminal.
 
-Program Numerasa memiliki beberapa fitur utama:
-1. Menampilkan menu kategori latihan numerasi.
-2. Menyediakan soal berdasarkan kategori yang dipilih.
-3. Memeriksa jawaban pengguna.
-4. Menghitung dan menampilkan nilai akhir.
-5. Menangani input jawaban yang tidak valid.
-6. Menghindari pengulangan soal dalam satu sesi latihan.
+Program dikembangkan dan diuji menggunakan Python 3.13.15.
 
-### Kategori Soal
-- Aritmetika Sehari-hari
-- Belanja dan Diskon
-- Perbandingan
-
-## 3. Teknologi yang Digunakan
-
-- Bahasa pemrograman: Python
-- Editor: Visual Studio Code
-- Platform: Terminal/Command Prompt
-- Version control: Git dan GitHub
-
-## 4. Persyaratan
-
-- Python versi 3.x
-- Visual Studio Code
-- Terminal untuk menjalankan program
-
-## 5. Cara Menjalankan Program
-
+## Cara Menjalankan
 1. Buka folder proyek Numerasa di Visual Studio Code.
 2. Buka terminal.
 3. Jalankan perintah berikut:
@@ -45,18 +31,16 @@ Program Numerasa memiliki beberapa fitur utama:
 python main.py
 ```
 
-4. Pilih salah satu kategori dengan memasukkan angka 1, 2, atau 3.
-5. Jawab soal yang ditampilkan.
-6. Program akan menampilkan hasil latihan dan nilai akhir.
+4. Pilih kategori latihan yang tersedia.
+5. Jawab soal yang ditampilkan hingga selesai.
 
-## 6. Struktur Folder
-
+## Struktur Folder
 ```text
-numerasa-elgagreena-2225250049/
+numerasa/
 ├── README.md
 ├── proposal.md
-├── main.py
 ├── .gitignore
+├── main.py
 ├── data/
 │   └── nilai_contoh.txt
 ├── src/
@@ -70,37 +54,39 @@ numerasa-elgagreena-2225250049/
 │   └── utilitas.py
 ├── tests/
 │   └── test_case.md
-├── output/
-│   └── .gitkeep
-└── docs/
-    ├── bug_log.md
-    └── screenshot/
+├── docs/
+│   ├── bug_log.md
+│   └── screenshot/
+└── output/
+    └── .gitkeep
 ```
 
-## 7. Hasil Pengujian
+## Test Case
 
-Pengujian dilakukan untuk memastikan fitur program berjalan sesuai kebutuhan.
+| ID | Pengujian | Hasil | Status |
+|---|---|---|---|
+| TC01 | Memilih kategori Aritmetika Sehari-hari. | Soal sesuai kategori ditampilkan. | Berhasil |
+| TC02 | Memasukkan jawaban benar. | Pesan jawaban benar ditampilkan. | Berhasil |
+| TC03 | Memasukkan jawaban salah. | Pesan jawaban belum tepat ditampilkan. | Berhasil |
+| TC04 | Menjawab seluruh soal dengan benar. | Nilai akhir 100.00 ditampilkan. | Berhasil |
+| TC05 | Memilih kategori Perbandingan. | Dua soal berbeda ditampilkan. | Berhasil |
+| TC06 | Memasukkan pilihan menu 4. | Pesan pilihan tidak tersedia ditampilkan. | Berhasil |
+| TC07 | Memasukkan jawaban berupa huruf. | Pesan kesalahan dan permintaan input ulang ditampilkan. | Berhasil |
+| TC08 | Menampilkan dua soal dalam satu sesi. | Soal tidak ditampilkan berulang. | Berhasil |
+| TC09 | Memasukkan huruf pada pilihan menu. | Pesan pilihan tidak tersedia ditampilkan. | Berhasil |
 
-Berdasarkan pengujian yang telah dilakukan, seluruh 9 test case berhasil dijalankan dengan hasil sesuai harapan.
+## Known Issues
+- Setiap kategori saat ini memiliki dua soal.
+- Program belum menyediakan fitur penyimpanan hasil latihan ke file teks.
 
-Rincian pengujian dapat dilihat pada file `tests/test_case.md`.
+## Anggota dan Kontribusi
+**Elga Greena Rahma Tazkia**
 
-## 8. Bug dan Perbaikan
+Bertanggung jawab atas perancangan proyek, implementasi program, pengujian, dokumentasi, serta pengelolaan repositori GitHub.
 
-Selama implementasi ditemukan masalah berupa pengulangan soal dalam satu sesi latihan dan ketidaksesuaian parameter fungsi.
-
-Kedua masalah tersebut telah diperbaiki. Catatan lengkap dapat dilihat pada file `docs/bug_log.md`.
-
-## 9. Pengembang
-
-Nama: Elga Greena Rahma Tazkia  
-NIM: 22252500499  
-Program Studi: Pendidikan Matematika  
-Fakultas: FKIP  
-Universitas: Universitas Sultan Ageng Tirtayasa
-
-## 10. Referensi dan Bantuan
-
-- Materi perkuliahan Algoritma dan Pemrograman Pendidikan Matematika.
-- Dokumentasi resmi Python.
-- Bantuan AI ChatGPT dalam proses pengembangan, penelusuran kesalahan, dan penyusunan dokumentasi.
+## Referensi/Bantuan
+- Bahan Ajar Algoritma dan Pemrograman Pertemuan 14 dan 15.
+- Python 3 Documentation.
+- Visual Studio Code Documentation.
+- GitHub Docs.
+- ChatGPT digunakan sebagai bantuan dalam memahami materi, penyelesaian kendala pemrograman, dan penyusunan dokumentasi. Implementasi dan pengujian program dilakukan serta diperiksa kembali oleh pengembang.
